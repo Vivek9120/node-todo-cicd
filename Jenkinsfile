@@ -9,9 +9,12 @@ pipeline{
         }
         stage('Build and Test'){
             steps{
-                sh 'docker build . -t vk84178/node-todo:latest'
+                sh 'docker build . -t vk84178/node-todo:latest' 
             }
+
+
         }
+
         stage('pushing to dockerhub'){
             steps{
                 echo "Logging in and pushing to docker hub "
