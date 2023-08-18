@@ -15,7 +15,7 @@ pipeline{
 
         }
 
-        stage('pushing to dockerhub'){
+        stage('Pushing to dockerhub'){
             steps{
                 echo "Logging in and pushing to docker hub "
                 withCredentials([usernamePassword(credentialsId:'dockerhub',passwordVariable:'dockerhubPassword',usernameVariable:'dockerhubUser')]){
